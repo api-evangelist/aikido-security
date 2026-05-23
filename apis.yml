@@ -1,0 +1,100 @@
+aid: aikido-security
+name: Aikido Security
+description: >-
+  Aikido Security is a developer-first all-in-one application security platform
+  that consolidates SAST, SCA, secret detection, container scanning, IaC
+  scanning, CSPM, DAST, API security, malware detection, cloud posture, and AI
+  pentesting into a single product designed for engineering teams. Aikido
+  exposes a public REST API at apidocs.aikido.dev covering issues, code
+  repositories, cloud resources, containers, domains and APIs, compliance
+  (SOC2, ISO 27001, NIS2, CIS), custom SAST rules, AI pentesting, task
+  tracking, webhooks, user and team management, Zen app-protection
+  configuration, and activity logging.
+kind: company
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI Pentesting
+  - API Security
+  - Application Security
+  - Cloud Security
+  - Compliance
+  - DAST
+  - Developer-First
+  - IaC Scanning
+  - SAST
+  - SCA
+  - Secret Detection
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/aikido-security/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: aikido-security:aikido-rest-api
+    name: Aikido Security REST API
+    description: >-
+      Aikido Security's REST API provides programmatic access to the Aikido
+      platform across issues and findings, code repositories and SBOM export,
+      cloud resources (AWS, Azure, GCP, Kubernetes), container registries and
+      image scans, domains and API surface, compliance frameworks (CIS, ISO
+      27001, NIS2, SOC2), custom SAST rules (Semgrep), AI pentesting drafts
+      and assessments, task tracking integrations, webhooks, teams and users
+      with permissions, Zen app-protection (bot protection, IP blocking,
+      threat configurations), and activity logs with PDF export. Authentication
+      is via access tokens issued through the authorization endpoint.
+    humanURL: https://apidocs.aikido.dev/reference/introduction
+    tags:
+      - AI Pentesting
+      - Application Security
+      - Compliance
+      - Issues
+      - REST API
+      - Scans
+      - Webhooks
+    properties:
+      - type: Documentation
+        url: https://apidocs.aikido.dev/
+      - type: APIReference
+        url: https://apidocs.aikido.dev/reference/introduction
+      - type: Authentication
+        url: https://apidocs.aikido.dev/reference/authorization
+      - type: OpenAPI
+        url: https://apidocs.aikido.dev/reference/getopenapispec
+      - type: LLMsTxt
+        url: https://apidocs.aikido.dev/llms.txt
+      - type: RateLimits
+        url: https://apidocs.aikido.dev/reference/rate-limiting
+common:
+  - type: Website
+    url: https://www.aikido.dev/
+  - type: Documentation
+    url: https://help.aikido.dev/
+  - type: APIDocumentation
+    url: https://apidocs.aikido.dev/
+  - type: Login
+    url: https://app.aikido.dev/login
+  - type: Signup
+    url: https://app.aikido.dev/signup
+  - type: Pricing
+    url: https://www.aikido.dev/pricing
+  - type: TrustCenter
+    url: https://trust.aikido.dev/
+  - type: StatusPage
+    url: https://status.aikido.dev/
+  - type: Blog
+    url: https://www.aikido.dev/blog
+  - type: Integrations
+    url: https://www.aikido.dev/integrations
+  - type: Customers
+    url: https://www.aikido.dev/case-studies
+  - type: AboutUs
+    url: https://www.aikido.dev/about
+  - type: Careers
+    url: https://www.aikido.dev/careers
+  - type: GitHubOrganization
+    url: https://github.com/AikidoSec
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/aikido-security/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
