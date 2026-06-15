@@ -1,0 +1,816 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Aikido Security Public REST API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Code Repositories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List code repositories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code"
+          },
+          "docs": "List code repositories"
+        },
+        {
+          "info": {
+            "name": "Get code repository detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get code repository detail"
+        },
+        {
+          "info": {
+            "name": "Delete code repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete code repository"
+        },
+        {
+          "info": {
+            "name": "Scan a code repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id/scan",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Scan a code repository"
+        },
+        {
+          "info": {
+            "name": "Export SBOM (packages and licenses) for a code repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id/sbom",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Export SBOM (packages and licenses) for a code repository"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Containers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List container repositories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/containers"
+          },
+          "docs": "List container repositories"
+        },
+        {
+          "info": {
+            "name": "Get container repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/containers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get container repository"
+        },
+        {
+          "info": {
+            "name": "Delete container",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/containers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete container"
+        },
+        {
+          "info": {
+            "name": "Scan container",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/containers/:id/scan",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Scan container"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Clouds",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List connected clouds",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/clouds"
+          },
+          "docs": "List connected clouds"
+        },
+        {
+          "info": {
+            "name": "Remove a cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove a cloud"
+        },
+        {
+          "info": {
+            "name": "Connect AWS cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/aws"
+          },
+          "docs": "Connect AWS cloud"
+        },
+        {
+          "info": {
+            "name": "Connect Azure cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/azure"
+          },
+          "docs": "Connect Azure cloud"
+        },
+        {
+          "info": {
+            "name": "Connect GCP cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/gcp"
+          },
+          "docs": "Connect GCP cloud"
+        },
+        {
+          "info": {
+            "name": "Create Kubernetes cloud connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/kubernetes"
+          },
+          "docs": "Create Kubernetes cloud connection"
+        },
+        {
+          "info": {
+            "name": "List cloud assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/assets"
+          },
+          "docs": "List cloud assets"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Domains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/domains"
+          },
+          "docs": "List domains"
+        },
+        {
+          "info": {
+            "name": "Create domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/domains"
+          },
+          "docs": "Create domain"
+        },
+        {
+          "info": {
+            "name": "Remove domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/domains/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove domain"
+        },
+        {
+          "info": {
+            "name": "Start domain scan",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/domains/:id/scan",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Start domain scan"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Issues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Export all issues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues"
+          },
+          "docs": "Export all issues"
+        },
+        {
+          "info": {
+            "name": "Get issue detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get issue detail"
+        },
+        {
+          "info": {
+            "name": "Ignore an issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/issues/:id/ignore",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Ignore an issue"
+        },
+        {
+          "info": {
+            "name": "Snooze an issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/issues/:id/snooze",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Snooze an issue"
+        },
+        {
+          "info": {
+            "name": "List open issue groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues/groups/open"
+          },
+          "docs": "List open issue groups"
+        },
+        {
+          "info": {
+            "name": "Get issue group detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues/groups/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get issue group detail"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Compliance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "CIS compliance overview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/compliance/cis"
+          },
+          "docs": "CIS compliance overview"
+        },
+        {
+          "info": {
+            "name": "CIS AWS compliance overview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/compliance/cis-aws"
+          },
+          "docs": "CIS AWS compliance overview"
+        },
+        {
+          "info": {
+            "name": "ISO 27001 compliance overview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/compliance/iso27001"
+          },
+          "docs": "ISO 27001 compliance overview"
+        },
+        {
+          "info": {
+            "name": "NIS2 compliance overview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/compliance/nis2"
+          },
+          "docs": "NIS2 compliance overview"
+        },
+        {
+          "info": {
+            "name": "SOC2 compliance overview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/compliance/soc2"
+          },
+          "docs": "SOC2 compliance overview"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Custom Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List custom Semgrep rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules"
+          },
+          "docs": "List custom Semgrep rules"
+        },
+        {
+          "info": {
+            "name": "Create custom Semgrep rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules"
+          },
+          "docs": "Create custom Semgrep rule"
+        },
+        {
+          "info": {
+            "name": "Get custom rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get custom rule"
+        },
+        {
+          "info": {
+            "name": "Remove custom rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove custom rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/teams"
+          },
+          "docs": "List teams"
+        },
+        {
+          "info": {
+            "name": "Create team",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/teams"
+          },
+          "docs": "Create team"
+        },
+        {
+          "info": {
+            "name": "Update team",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.aikido.dev/api/public/v1/teams/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update team"
+        },
+        {
+          "info": {
+            "name": "Delete team",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/teams/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete team"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/users"
+          },
+          "docs": "List users"
+        },
+        {
+          "info": {
+            "name": "Get user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/users/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/webhooks"
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Add webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/webhooks"
+          },
+          "docs": "Add webhook"
+        },
+        {
+          "info": {
+            "name": "Remove webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/webhooks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove webhook"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Zen",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Zen apps",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/zen/apps"
+          },
+          "docs": "List Zen apps"
+        },
+        {
+          "info": {
+            "name": "Create Zen app",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/zen/apps"
+          },
+          "docs": "Create Zen app"
+        },
+        {
+          "info": {
+            "name": "Get Zen app",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/zen/apps/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get Zen app"
+        },
+        {
+          "info": {
+            "name": "Delete Zen app",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/zen/apps/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete Zen app"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Workspace",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get workspace info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/workspace"
+          },
+          "docs": "Get workspace info"
+        },
+        {
+          "info": {
+            "name": "Get full OpenAPI spec of Aikido Public REST API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/openapi"
+          },
+          "docs": "Get full OpenAPI spec of Aikido Public REST API"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
