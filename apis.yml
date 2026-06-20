@@ -11,7 +11,7 @@ description: >-
   tracking, webhooks, user and team management, Zen app-protection
   configuration, and activity logging.
 kind: company
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI Pentesting
   - API Security
