@@ -5,17 +5,18 @@
       "source": "https://www.aikido.dev/blog/rss.xml",
       "feed_url": "https://www.aikido.dev/blog/rss.xml",
       "title": "",
-      "saved": 8,
+      "saved": 4,
       "method": "feed"
     },
     {
       "source": "https://status.aikido.dev/",
       "feed_url": "https://status.aikido.dev/feed",
       "title": "",
-      "saved": 2,
-      "method": "discovered"
+      "saved": 0,
+      "method": "discovered",
+      "note": "status feed no longer returns valid XML (HTML page)"
     }
   ],
-  "post_count": 14,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 18,
+  "fetched": "2026-06-21T17:00:00Z"
 }
