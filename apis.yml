@@ -60,7 +60,7 @@ apis:
         url: https://apidocs.aikido.dev/reference/authorization
       - type: OpenAPI
         url: https://apidocs.aikido.dev/reference/getopenapispec
-      - type: LLMsTxt
+      - type: LlmsText
         url: https://apidocs.aikido.dev/llms.txt
       - type: RateLimits
         url: https://apidocs.aikido.dev/reference/rate-limiting
