@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/aikido-security-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: |-
+    Bearer access token obtained via POST https://app.aikido.dev/api/oauth/token
+    with grant_type=client_credentials and Basic auth (client_id:client_secret).
+  sources:
+  - openapi/aikido-security-openapi.yml
