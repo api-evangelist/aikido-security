@@ -65,6 +65,8 @@ apis:
       - type: RateLimits
         url: https://apidocs.aikido.dev/reference/rate-limiting
 common:
+  - type: AgenticAccess
+    url: agentic-access/aikido-security-agentic-access.yml
   - type: TrustCenter
     url: security/aikido-security-trust-center.yml
   - type: VulnerabilityDisclosure
