@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: Aikido Security Public REST Clouds Users API
+  version: '1.0'
+  description: 'Best-effort OpenAPI 3.1 representation of the Aikido Security public REST API
+
+    derived from https://apidocs.aikido.dev/ (llms.txt index and reference pages).
+
+    Aikido is an all-in-one application security platform exposing endpoints for
+
+    issues, code repositories, containers, clouds, domains, compliance, teams,
+
+    users, webhooks, Zen app protection, and more.
+
+    '
+  contact:
+    name: Aikido Security
+    url: https://apidocs.aikido.dev/
+servers:
+- url: https://app.aikido.dev/api/public/v1
+  description: EU (default) region
+- url: https://app.us.aikido.dev/api/public/v1
+  description: US region
+- url: https://app.me.aikido.dev/api/public/v1
+  description: Middle East region
+security:
+- BearerAuth: []
+tags:
+- name: Users
+paths:
+  /users:
+    get:
+      tags:
+      - Users
+      summary: List users
+      operationId: listUsers
+      responses:
+        '200':
+          description: OK
+  /users/{id}:
+    get:
+      tags:
+      - Users
+      summary: Get user
+      operationId: getUser
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: 'Bearer access token obtained via POST https://app.aikido.dev/api/oauth/token
+
+        with grant_type=client_credentials and Basic auth (client_id:client_secret).
+
+        '

@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: Aikido Security Public REST Clouds Compliance API
+  version: '1.0'
+  description: 'Best-effort OpenAPI 3.1 representation of the Aikido Security public REST API
+
+    derived from https://apidocs.aikido.dev/ (llms.txt index and reference pages).
+
+    Aikido is an all-in-one application security platform exposing endpoints for
+
+    issues, code repositories, containers, clouds, domains, compliance, teams,
+
+    users, webhooks, Zen app protection, and more.
+
+    '
+  contact:
+    name: Aikido Security
+    url: https://apidocs.aikido.dev/
+servers:
+- url: https://app.aikido.dev/api/public/v1
+  description: EU (default) region
+- url: https://app.us.aikido.dev/api/public/v1
+  description: US region
+- url: https://app.me.aikido.dev/api/public/v1
+  description: Middle East region
+security:
+- BearerAuth: []
+tags:
+- name: Compliance
+paths:
+  /compliance/cis:
+    get:
+      tags:
+      - Compliance
+      summary: CIS compliance overview
+      operationId: getCisComplianceOverview
+      responses:
+        '200':
+          description: OK
+  /compliance/cis-aws:
+    get:
+      tags:
+      - Compliance
+      summary: CIS AWS compliance overview
+      operationId: getCisAwsComplianceOverview
+      responses:
+        '200':
+          description: OK
+  /compliance/iso27001:
+    get:
+      tags:
+      - Compliance
+      summary: ISO 27001 compliance overview
+      operationId: getIsoComplianceOverview
+      responses:
+        '200':
+          description: OK
+  /compliance/nis2:
+    get:
+      tags:
+      - Compliance
+      summary: NIS2 compliance overview
+      operationId: getNis2ComplianceOverview
+      responses:
+        '200':
+          description: OK
+  /compliance/soc2:
+    get:
+      tags:
+      - Compliance
+      summary: SOC2 compliance overview
+      operationId: getSoc2ComplianceOverview
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: 'Bearer access token obtained via POST https://app.aikido.dev/api/oauth/token
+
+        with grant_type=client_credentials and Basic auth (client_id:client_secret).
+
+        '
