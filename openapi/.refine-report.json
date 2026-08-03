@@ -1,0 +1,36 @@
+{
+  "provider": "aikido-security",
+  "sources": [
+    "aikido-security-clouds-api-openapi.yml",
+    "aikido-security-code-repositories-api-openapi.yml",
+    "aikido-security-compliance-api-openapi.yml",
+    "aikido-security-containers-api-openapi.yml",
+    "aikido-security-custom-rules-api-openapi.yml",
+    "aikido-security-domains-api-openapi.yml",
+    "aikido-security-issues-api-openapi.yml",
+    "aikido-security-teams-api-openapi.yml",
+    "aikido-security-users-api-openapi.yml",
+    "aikido-security-webhooks-api-openapi.yml",
+    "aikido-security-workspace-api-openapi.yml",
+    "aikido-security-zen-api-openapi.yml"
+  ],
+  "outputs": [
+    "aikido-security-clouds-api-openapi.yml",
+    "aikido-security-code-repositories-api-openapi.yml",
+    "aikido-security-compliance-api-openapi.yml",
+    "aikido-security-containers-api-openapi.yml",
+    "aikido-security-custom-rules-api-openapi.yml",
+    "aikido-security-domains-api-openapi.yml",
+    "aikido-security-issues-api-openapi.yml",
+    "aikido-security-teams-api-openapi.yml",
+    "aikido-security-users-api-openapi.yml",
+    "aikido-security-webhooks-api-openapi.yml",
+    "aikido-security-workspace-api-openapi.yml",
+    "aikido-security-zen-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
