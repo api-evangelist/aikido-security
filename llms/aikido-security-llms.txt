@@ -1,0 +1,186 @@
+# Aikido Security Documentation
+
+> Documentation for Aikido Security
+
+## API Reference
+- [Authorization](https://apidocs.aikido.dev/reference/authorization.md): Get started with Aikido's REST API by getting access tokens
+- [Webhooks](https://apidocs.aikido.dev/reference/webhooks.md): Get notified in real time of events happening in your account
+- [Verifying incoming webhooks](https://apidocs.aikido.dev/reference/verirfying-webhooks.md): Ensure that incoming webhooks are authentic webhooks coming from Aikido
+- [Rate Limiting](https://apidocs.aikido.dev/reference/rate-limiting.md): Rate limit your API calls
+- [Get access token](https://apidocs.aikido.dev/reference/getaccesstoken.md): Retrieve an access token, see more information about authorization on https://apidocs.aikido.dev/reference/authorization
+- [Export all issues](https://apidocs.aikido.dev/reference/exportissues.md): Returns a list of all issues (open, ignored, snoozed, closed,..) in your account in JSON or CSV format
+- [List open issue groups](https://apidocs.aikido.dev/reference/listopenissuegroups.md): Returns a list of all the open issue groups in your account, as seen in the feed. Use the header X-Has-Next-Page for easy pagination.
+- [Get issue group detail](https://apidocs.aikido.dev/reference/getissuegroupdetails.md): Returns the details of an issue group
+- [Get issue detail](https://apidocs.aikido.dev/reference/getissuedetail.md): Returns the details of a single issue
+- [Get issue details bulk](https://apidocs.aikido.dev/reference/getissuedetailsbulk.md): Returns the details of multiple issues. This feature needs to be enabled by Aikido support before it can be used.
+- [Adjust severity of an issue](https://apidocs.aikido.dev/reference/adjustseverity.md): Adjust severity of a single issue to 'critical', 'high', 'medium' or 'low'
+- [Adjust severity of an issue group](https://apidocs.aikido.dev/reference/adjustgroupseverity.md): Adjust severity of an issue group to 'critical', 'high', 'medium' or 'low'
+- [Snooze an issue](https://apidocs.aikido.dev/reference/snoozeissue.md): Snooze an issue for a given period
+- [Ignore an issue](https://apidocs.aikido.dev/reference/ignoreissue.md): Ignore an issue
+- [Solve an issue](https://apidocs.aikido.dev/reference/solveissue.md): Solve an issue
+- [Get issue counts](https://apidocs.aikido.dev/reference/getissuecounts.md): Returns the total number of open issues
+- [Get issue reachability](https://apidocs.aikido.dev/reference/getissuereachability.md): Returns the reachability of a single issue
+- [Ignore an issue group](https://apidocs.aikido.dev/reference/ignoreissuegroup.md): Ignore an issue group
+- [Snooze an issue group](https://apidocs.aikido.dev/reference/snoozeissuegroup.md): Snooze an issue group for a given period
+- [Unsnooze an issue](https://apidocs.aikido.dev/reference/unsnoozeissue.md): Unsnooze an issue for a given period
+- [Unignore an issue](https://apidocs.aikido.dev/reference/unignoreissue.md): Unignore an issue
+- [Unignore an issue group](https://apidocs.aikido.dev/reference/unignoreissuegroup.md): Unignore an issue group
+- [Unsnooze an issue group](https://apidocs.aikido.dev/reference/unsnoozeissuegroup.md): Unsnooze an issue group
+- [Add note to issue group](https://apidocs.aikido.dev/reference/addnotetoissuegroup.md): Add note to issue group
+- [List notes for issue group](https://apidocs.aikido.dev/reference/listnotesforissuegroup.md): List notes for an issue group
+- [List connected clouds](https://apidocs.aikido.dev/reference/listclouds-1.md): Returns a list of all the active clouds connected in your account
+- [Get cloud assets](https://apidocs.aikido.dev/reference/getcloudassets.md): Returns cloud assets for the connected clouds in your account. Supports pagination, filtering and search parameters similar to the cloud inventory UI. Array-valued filters are passed as comma-separated values. AI cloud search through this public endpoint expects prompts to be created in the Aikido app first and reused via `prompt_id`.
+- [Remove cloud](https://apidocs.aikido.dev/reference/removecloud.md): Removes a cloud with a specified id
+- [Connect AWS cloud](https://apidocs.aikido.dev/reference/connectawscloud-1.md): Connect a new AWS cloud environment
+- [Connect Azure cloud](https://apidocs.aikido.dev/reference/connectazurecloud.md): Connect a new Azure cloud environment. https://help.aikido.dev/doc/get-required-values--set-up-configuration-to-connect-azure-cloud-via-public-api/docMB6NzhONG
+- [Update Azure cloud](https://apidocs.aikido.dev/reference/updateazurecloudcredentials.md): Update the credentials for an Azure cloud
+- [Connect GCP cloud](https://apidocs.aikido.dev/reference/connectgcpcloud.md): Connect a new Gcp cloud environment. https://help.aikido.dev/cloud-scanning/connect-your-cloud/gcp/get-required-values-+-set-up-configuration-to-connect-gcp-cloud-via-public-api
+- [Create Kubernetes cloud](https://apidocs.aikido.dev/reference/createkubernetescloud.md): Connect your Kubernetes cluster to Aikido. This will register a cluster and return the agent token needed for installation. https://github.com/AikidoSec/helm-charts
+- [List code repositories](https://apidocs.aikido.dev/reference/listcoderepos.md): Returns a list of all the active code repositories in your account
+- [Export SBOM](https://apidocs.aikido.dev/reference/exportcoderepolicenses.md): Returns an overview of all packages & licenses found in a code repository
+- [Export SBOM For Team](https://apidocs.aikido.dev/reference/exportcoderepolicensesforteam.md): Only available for Scale plan workspaces! Returns an overview of all packages & licenses found in code repositories linked to a specified team
+- [Get code repository detail](https://apidocs.aikido.dev/reference/detailcoderepo.md): Returns the details of a code repository
+- [Scan code repo](https://apidocs.aikido.dev/reference/scancoderepo.md): Scan a code repository
+- [Trigger repositories sync](https://apidocs.aikido.dev/reference/importnewcoderepositories.md): Triggers a code repositories sync with your Git provider
+- [Activate code repo](https://apidocs.aikido.dev/reference/activatecoderepo.md): Activate code repo
+- [Deactivate code repo](https://apidocs.aikido.dev/reference/deactivatecoderepo.md): Deactivate code repo
+- [Clone code repo](https://apidocs.aikido.dev/reference/clonecoderepo.md): Clone code repo for multi branch scanning
+- [Manage private registry](https://apidocs.aikido.dev/reference/addprivateregistry.md): Add or update your private package registry connection, such as a private NPM or Maven package registry.
+- [Manage dev dep scanning](https://apidocs.aikido.dev/reference/updatecoderepodevdepscan.md): Update code repository dev dependency scanning
+- [Update sensitivity](https://apidocs.aikido.dev/reference/updatecodereposensitivity.md): Update code repository sensitivity
+- [Update connectivity](https://apidocs.aikido.dev/reference/updatecoderepoconnectivity.md): Update code repository connectivity
+- [List PR Checks configurations](https://apidocs.aikido.dev/reference/listprchecksconfigurations.md): Returns a paginated list of all the CI checks configurations in your account
+- [Configure PR Checks](https://apidocs.aikido.dev/reference/saveprchecksconfiguration.md): Configure PR Checks
+- [Add an exclude path to a code repo](https://apidocs.aikido.dev/reference/addcoderepoexcludepath.md): Add an exclude path to a code repo
+- [Remove an exclude path from a code repo](https://apidocs.aikido.dev/reference/removecoderepoexcludepath.md): Remove an exclude path from a code repo
+- [Add code repo label](https://apidocs.aikido.dev/reference/addcoderepolabel.md): Add a label to a code repository
+- [Update code repo label](https://apidocs.aikido.dev/reference/updatecoderepolabel.md): Update a label for a code repository
+- [Remove code repo label](https://apidocs.aikido.dev/reference/removecoderepolabel.md): Remove a label from a code repository
+- [Delete code repo](https://apidocs.aikido.dev/reference/deletecoderepo.md): Delete code repo. Only supported for selfscanned or cloned repositories.
+- [List teams](https://apidocs.aikido.dev/reference/listteams.md): Returns a list of all the teams in your account
+- [Update team](https://apidocs.aikido.dev/reference/updateteam.md): Update an existing team
+- [Link resource to team](https://apidocs.aikido.dev/reference/linkresourcetoteam.md): Link resource to team
+- [Unlink resource from team](https://apidocs.aikido.dev/reference/unlinkresourcefromteam.md): Unlink resource from team
+- [Add user to team](https://apidocs.aikido.dev/reference/addusertoteam.md): Add user to team
+- [Remove user from team](https://apidocs.aikido.dev/reference/removeuserfromteam.md): Remove user from team
+- [Create team](https://apidocs.aikido.dev/reference/createteam.md): Create a new team
+- [Delete team](https://apidocs.aikido.dev/reference/deleteteam.md): Delete a non-imported team
+- [Update repository path limitation for a team](https://apidocs.aikido.dev/reference/updateteamrepopathlimitation.md): Update the path limitations for a repository that is already linked to a team. This works for both manually created and imported teams (e.g. GitHub teams), and does not change which resources are linked to the team.
+- [List containers](https://apidocs.aikido.dev/reference/listcontainerrepos.md): Returns a list of all the active container repositories in your account
+- [Get container](https://apidocs.aikido.dev/reference/getcontainerrepo.md): Returns the requested container repository
+- [Export SBOM](https://apidocs.aikido.dev/reference/exportcontainerrepolicenses.md): Returns an overview of all packages & licenses found in a container
+- [Generate bulk SBOM](https://apidocs.aikido.dev/reference/generatecontainersbom.md): Returns an SBOM of all packages & licenses found in specified containers
+- [Upload container SBOM](https://apidocs.aikido.dev/reference/uploadcontainersbom.md): Upload a self-generated SBOM
+- [Delete container](https://apidocs.aikido.dev/reference/deletecontainer.md): Delete public or self-reported SBOM container
+- [Activate container](https://apidocs.aikido.dev/reference/activatecontainer.md): Activate container
+- [Deactivate container](https://apidocs.aikido.dev/reference/deactivatecontainer.md): Deactivate container
+- [Update container tag filter](https://apidocs.aikido.dev/reference/updatetagfilter.md): Update the tag filter used for the container scanning
+- [Get container registry](https://apidocs.aikido.dev/reference/getcontainerregistry.md): Returns the requested container registry
+- [Add public container](https://apidocs.aikido.dev/reference/addpubliccontainer.md): Add public container image to Aikido to scan, such as nginx:latest
+- [Clone container](https://apidocs.aikido.dev/reference/clonecontainer.md): Clone container with a specific tag filter
+- [Update sensitivity](https://apidocs.aikido.dev/reference/updatecontainersensitivity.md): Update container sensitivity
+- [Update connectivity](https://apidocs.aikido.dev/reference/updatecontainerinternetconnection.md): Update container connectivity status
+- [Scan container](https://apidocs.aikido.dev/reference/scancontainer.md): Scan a container
+- [Link code repository to container](https://apidocs.aikido.dev/reference/linkcoderepotocontainer.md): Link code repository to container
+- [Unlink code repository from container](https://apidocs.aikido.dev/reference/unlinkcoderepotocontainer.md): Unlink code repository from container
+- [Add Azure container registry](https://apidocs.aikido.dev/reference/addazurecontainerregistry.md): Add Azure container registry to Aikido to scan
+- [Add GCP Artifact Registry](https://apidocs.aikido.dev/reference/addgcpartifactregistry.md): Add GCP Artifact Registry to Aikido to scan
+- [Add GitLab Self-Managed container registry](https://apidocs.aikido.dev/reference/addgitlabselfmanagedcontainerregistry.md): Add a GitLab Self-Managed (self-hosted) container registry to Aikido to scan
+- [List container runners](https://apidocs.aikido.dev/reference/listcontainerreporunners.md): Returns a list of places where a container image runs, such as AWS lambdas, AWS ECS, Azure Jobs, Kubernetes pods,..
+- [Export Raw SBOM](https://apidocs.aikido.dev/reference/exportrawcontainersbom.md): Returns the latest uploaded SBOM of a container with all metadata collected.
+- [Add container label](https://apidocs.aikido.dev/reference/addcontainerlabel.md): Add a label to a container repository
+- [Update container label](https://apidocs.aikido.dev/reference/updatecontainerlabel.md): Update a label for a container repository
+- [Remove container label](https://apidocs.aikido.dev/reference/removecontainerlabel.md): Remove a label from a container repository
+- [List autofix history](https://apidocs.aikido.dev/reference/listautofixhistory.md): Returns a paginated list of autofix tasks in your account. Use the header X-Has-Next-Page for pagination.
+- [List issues addressed by a task](https://apidocs.aikido.dev/reference/listautofixtaskissues.md): Returns the issues that an autofix task was trying to solve. Use the autofix task ID (the `id` field) from the /autofix/history endpoint.
+- [Get dependency AutoFix PR creation settings](https://apidocs.aikido.dev/reference/getdependencyautofixsettings.md): Get the workspace dependency AutoFix PR creation settings. Repository selection is returned as repos_scope ("all" or "selected") plus repo_ids (empty when scope is "all"). Inactive or unknown repository IDs are filtered out of the response.
+- [Update dependency AutoFix PR creation settings](https://apidocs.aikido.dev/reference/updatedependencyautofixsettings.md): Update the workspace dependency AutoFix PR creation settings. PRs are created and re-evaluated every day. Use severity_filter to set which dependency upgrades to autofix. Use repos_scope of "all" or "selected"; when "selected", pass repository IDs in repo_ids. Inactive or unknown repository IDs are filtered out. "all" is paying accounts only. Send enabled: false to turn dependency AutoFix off; the other fields are then ignored. This only affects dependency AutoFix, other AutoFix features keep their own settings.
+- [Get Pentest AutoFix PR creation settings](https://apidocs.aikido.dev/reference/getpentestautofixsettings.md): Get the workspace Pentest & AI Code Analysis AutoFix PR creation settings.
+- [Update Pentest AutoFix PR creation settings](https://apidocs.aikido.dev/reference/updatepentestautofixsettings.md): Update the workspace Pentest & AI Code Analysis AutoFix PR creation settings. PRs are created and re-evaluated every day. Use severity_filter to set which severities to autofix. Send enabled: false to turn Pentest AutoFix off; the other fields are then ignored. This only affects Pentest AutoFix, other AutoFix features keep their own settings.
+- [Get SAST & IaC AutoFix PR creation settings](https://apidocs.aikido.dev/reference/getsastautofixsettings.md): Get the workspace SAST & IaC AutoFix PR creation settings. Repository selection is returned as repos_scope ("all" or "selected") plus repo_ids (empty when scope is "all"). Inactive or unknown repository IDs are filtered out of the response.
+- [Update SAST & IaC AutoFix PR creation settings](https://apidocs.aikido.dev/reference/updatesastautofixsettings.md): Update the workspace SAST & IaC AutoFix PR creation settings. PRs are created and re-evaluated every day. Use severity_filter to set which severities to autofix. Use repos_scope of "all" or "selected"; when "selected", pass repository IDs in repo_ids. Inactive or unknown repository IDs are filtered out. "all" is paying accounts only. Send enabled: false to turn SAST AutoFix off; the other fields are then ignored. This only affects SAST AutoFix, other AutoFix features keep their own settings.
+- [Create domain](https://apidocs.aikido.dev/reference/createdomain.md): Create a new domain
+- [Remove domain](https://apidocs.aikido.dev/reference/removedomain.md): Removes a domain with a specified id
+- [Start scan for a domain](https://apidocs.aikido.dev/reference/startdomainscan.md): Start scan for a domain
+- [List domains](https://apidocs.aikido.dev/reference/listdomains.md): Returns a list of all the active domains connected in your account
+- [Update OpenAPI spec](https://apidocs.aikido.dev/reference/updatedomainopenapispec.md): Updates the OpenAPI spec of a domain with a specified id
+- [Update Auth Headers](https://apidocs.aikido.dev/reference/updatedomainauthenticationheaders.md): Update Authentication Headers for a Domain
+- [List Subdomains](https://apidocs.aikido.dev/reference/listsubdomains.md): List all the subdomains for a attack surface domain
+- [Add Subdomain](https://apidocs.aikido.dev/reference/addsubdomain.md): Add a subdomain to a attack surface domain
+- [Update Custom Scan Headers](https://apidocs.aikido.dev/reference/updatedomaincustomscanheaders.md): Update Custom Scan Headers for a Domain
+- [Export PDF report](https://apidocs.aikido.dev/reference/exportreportpdf.md): Returns a report as a pdf
+- [List PR Checks](https://apidocs.aikido.dev/reference/listciscans.md): Returns PR checks
+- [List PR Check Manual Actions](https://apidocs.aikido.dev/reference/listciscanissueactions.md): Returns all manual ignores or snoozes actions taken on issues flagged in PRs
+- [List activity log](https://apidocs.aikido.dev/reference/listactivitylog.md): Returns the activity log items
+- [List SAST rules](https://apidocs.aikido.dev/reference/listsastrules.md): List SAST rules. Requires scope repositories:read
+- [List IaC rules](https://apidocs.aikido.dev/reference/listiacrules.md): List IaC rules. Requires scope repositories:read
+- [List Mobile rules](https://apidocs.aikido.dev/reference/listmobilerules.md): List Mobile rules. Requires scope repositories:read
+- [List cloud rules](https://apidocs.aikido.dev/reference/listcloudrules.md): List cloud rules. Requires scope clouds:read
+- [Create app](https://apidocs.aikido.dev/reference/createapp.md): Create a new Zen app
+- [Update app](https://apidocs.aikido.dev/reference/updateapp.md): update an existing Zen app
+- [List apps](https://apidocs.aikido.dev/reference/listapps.md): List Zen apps
+- [Get app](https://apidocs.aikido.dev/reference/getapp.md): Get a Zen app
+- [Get event](https://apidocs.aikido.dev/reference/getevent.md): Get a Zen event
+- [List users](https://apidocs.aikido.dev/reference/listzenusers.md): List the users for a Zen app
+- [Update user](https://apidocs.aikido.dev/reference/updateuser.md): update blocking status of a user
+- [Rotate app token](https://apidocs.aikido.dev/reference/rotateapptoken.md): creates a new token and revokes the current token if it exists for a Zen app
+- [Get countries](https://apidocs.aikido.dev/reference/getcountries.md): Get the country-based IP blocking configuration for an app
+- [Update countries](https://apidocs.aikido.dev/reference/updatecountries.md): Update the country-based IP blocking configuration for an app
+- [Get threat lists](https://apidocs.aikido.dev/reference/getiplists.md): Get the IP lists configuration for an app including known threat actors and Tor settings
+- [Update threat lists](https://apidocs.aikido.dev/reference/updateiplists.md): Update the IP lists configuration for an app including known threat actors and Tor settings. This endpoint supports partial updates - only include the properties you want to modify. Omitted properties will remain unchanged.
+- [Get bot lists](https://apidocs.aikido.dev/reference/getbotlists.md): Get the bot lists configuration for an app
+- [Update bot lists](https://apidocs.aikido.dev/reference/updatebotlists.md): Update the bot lists configuration for an app
+- [Update IP blocklist](https://apidocs.aikido.dev/reference/updateipblocklist.md): Set the custom IP blocklist for an app. This will replace the existing blocklist with the new one.
+- [Update blocking mode](https://apidocs.aikido.dev/reference/updateblocking.md): Enable or disable blocking mode for a Zen app
+- [Delete app](https://apidocs.aikido.dev/reference/deleteapp.md): Delete a Zen app
+- [List users](https://apidocs.aikido.dev/reference/listusers.md): Returns a list of all the users
+- [Get user](https://apidocs.aikido.dev/reference/getuser.md): Returns the specified user details
+- [Update user rights](https://apidocs.aikido.dev/reference/updateuserrights.md): Update the specified user rights
+- [List IDE adoption](https://apidocs.aikido.dev/reference/listideadoption.md): Returns a list of all the users that have an active IDE token
+- [SOC2 compliance](https://apidocs.aikido.dev/reference/getsoc2complianceoverview.md): Returns the SOC2 compliance overview in JSON format. This endpoint is available on all paid plans.
+- [NIS2 compliance](https://apidocs.aikido.dev/reference/getnis2complianceoverview.md): Returns the NIS2 compliance overview in JSON format. This endpoint is available on all paid plans.
+- [ISO 27001 compliance](https://apidocs.aikido.dev/reference/getisocomplianceoverview.md): Returns the ISO compliance overview in JSON format. This endpoint is available on all paid plans.
+- [GDPR compliance](https://apidocs.aikido.dev/reference/getgdprcomplianceoverview.md): Returns the GDPR compliance overview in JSON format. This endpoint is available on all paid plans.
+- [CIS compliance](https://apidocs.aikido.dev/reference/getciscomplianceoverview.md): Returns the CIS compliance overview in JSON format. This endpoint is available on all paid plans.
+- [CIS AWS compliance](https://apidocs.aikido.dev/reference/getcisawscomplianceoverview.md): Returns the CIS AWS compliance overview in JSON format. This endpoint is available on all paid plans.
+- [List virtual machines](https://apidocs.aikido.dev/reference/listvirtualmachines.md): Returns a list of all the virtual machines in your account
+- [Export SBOM](https://apidocs.aikido.dev/reference/exportvirtualmachinesbom.md): Returns a SBOM of a virtual machine
+- [List custom rules](https://apidocs.aikido.dev/reference/listcustomrules.md): List custom semgrep rules
+- [Get a custom rule](https://apidocs.aikido.dev/reference/getcustomrule.md): Get a custom semgrep rule
+- [Create custom rule](https://apidocs.aikido.dev/reference/createcustomrule.md): Create a new custom semgrep rule
+- [Edit custom rule](https://apidocs.aikido.dev/reference/editcustomrule.md): Edit a custom semgrep rule
+- [Remove custom rule](https://apidocs.aikido.dev/reference/removecustomrule.md): Remove a custom semgrep rule
+- [Create pentest draft](https://apidocs.aikido.dev/reference/createpentestdraftassessment.md): Create a new draft pentest assessment. The project will be created if it doesn't exist. You can either provide existing repository IDs or create a custom repository from a download URL.
+- [Get pentest assessment](https://apidocs.aikido.dev/reference/getpentestassessmentdetail.md): Get detailed information about a specific pentest assessment including status, progress, and issue count
+- [Get attack analysis](https://apidocs.aikido.dev/reference/getattackanalysis.md): Get attack analysis for a specific pentest issue
+- [List task tracking integrations](https://apidocs.aikido.dev/reference/listtasktrackingintegrations.md): List task tracking integrations
+- [List task tracking projects](https://apidocs.aikido.dev/reference/getprojects.md): List task tracking projects
+- [List tasks from project](https://apidocs.aikido.dev/reference/gettasks.md): List tasks live from the integrated task tracker
+- [Link existing task to issue](https://apidocs.aikido.dev/reference/linktasktoissuegroup.md): Link existing task to issue group
+- [Get issue group tasks](https://apidocs.aikido.dev/reference/getissuegrouptasks.md): Returns the tasks related to an issue group
+- [Get project mapping](https://apidocs.aikido.dev/reference/getprojectmapping.md): Get project mapping
+- [Map code repo to task tracking projects](https://apidocs.aikido.dev/reference/maprepostoproject.md): Map code repo to task tracking projects
+- [Get latest local scanner version](https://apidocs.aikido.dev/reference/getlatestlocalscaninfo.md): Returns information about the latest local scanner
+- [List & Search SBOM](https://apidocs.aikido.dev/reference/listlicenses.md): Returns a list of licenses
+- [Overwrite License](https://apidocs.aikido.dev/reference/overwritelicenseforpackage.md): Overwrite License For Package
+- [Get CVE details](https://apidocs.aikido.dev/reference/getcvedetails.md): Get details about a CVE
+- [Get changelog summary](https://apidocs.aikido.dev/reference/getchangelogsummary.md): Get changelog summary for package
+- [Get malware packages](https://apidocs.aikido.dev/reference/getmalwarepackages.md): Get malware packages
+- [Update Code Scanning Access Token](https://apidocs.aikido.dev/reference/setcodescanningaccesstoken.md): Update the access token used for code scanning.
+- [List endpoint devices](https://apidocs.aikido.dev/reference/listendpointprotectiondevices.md): Returns a list of all the endpoint protection devices
+- [List installed packages](https://apidocs.aikido.dev/reference/listendpointprotectioninstalledpackages.md): Returns a list of all the installed packages
+- [List endpoint activity logs](https://apidocs.aikido.dev/reference/listendpointprotectionactivitylogs.md): Returns a paginated list of endpoint protection activity log items
+- [List endpoint exceptions](https://apidocs.aikido.dev/reference/listendpointprotectionexceptions.md): Returns a list of all the endpoint protection exceptions
+- [List endpoint permission groups](https://apidocs.aikido.dev/reference/listendpointprotectionpermissiongroups.md): Returns a list of all the endpoint protection permission groups
+- [Add an endpoint exception](https://apidocs.aikido.dev/reference/addendpointprotectionexception.md): Adds an exception to the endpoint protection settings
+- [Remove an endpoint exception](https://apidocs.aikido.dev/reference/removeendpointprotectionexception.md): Removes an exception from the endpoint protection settings
+- [List code quality findings for a pull request](https://apidocs.aikido.dev/reference/listcodequalityfindingsforpullrequest.md): Returns a list of code quality findings for a specific pull request. Only the findings from the latest scan are returned, excluding any suppressed findings.
+- [List code quality findings for a repository](https://apidocs.aikido.dev/reference/listcodequalityfullrepofindings.md): Returns a paginated list of code quality findings for a repository. Findings represent repository state across full-repository scans rather than a snapshot of one scan. Use the header X-Has-Next-Page for pagination.
+- [List webhooks](https://apidocs.aikido.dev/reference/listwebhooks.md): List webhooks
+- [Add webhook](https://apidocs.aikido.dev/reference/addwebhook.md): Add webhook
+- [Remove webhook](https://apidocs.aikido.dev/reference/removewebhook.md): Remove webhook
+- [Validate Bug Bounty Report](https://apidocs.aikido.dev/reference/addbugbountyreport.md): Validates a new bug bounty report for a given program.
+- [Get workspace info](https://apidocs.aikido.dev/reference/getworkspaceinfo-1.md): Returns information about the workspace of the client
+- [Get workspace configuration errors](https://apidocs.aikido.dev/reference/getworkspaceconfigurationerrors.md): Returns the configuration errors of the workspace
+- [Get OpenAPI spec](https://apidocs.aikido.dev/reference/getopenapispec.md): Returns the openAPI spec of Aikido's Public REST API
+- [Get SLA settings](https://apidocs.aikido.dev/reference/getslasettings.md): Returns the SLA settings for the workspace

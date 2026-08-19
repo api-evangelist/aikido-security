@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Aikido Security Public REST Clouds Custom Rules API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Custom Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List custom Semgrep rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules"
+          },
+          "docs": "List custom Semgrep rules"
+        },
+        {
+          "info": {
+            "name": "Create custom Semgrep rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules"
+          },
+          "docs": "Create custom Semgrep rule"
+        },
+        {
+          "info": {
+            "name": "Get custom rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get custom rule"
+        },
+        {
+          "info": {
+            "name": "Remove custom rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/custom-rules/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove custom rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

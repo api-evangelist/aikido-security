@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Aikido Security Public REST Clouds Code Repositories API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Code Repositories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List code repositories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code"
+          },
+          "docs": "List code repositories"
+        },
+        {
+          "info": {
+            "name": "Get code repository detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get code repository detail"
+        },
+        {
+          "info": {
+            "name": "Delete code repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete code repository"
+        },
+        {
+          "info": {
+            "name": "Scan a code repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id/scan",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Scan a code repository"
+        },
+        {
+          "info": {
+            "name": "Export SBOM (packages and licenses) for a code repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/repositories/code/:id/sbom",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Export SBOM (packages and licenses) for a code repository"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

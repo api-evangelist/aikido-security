@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Aikido Security Public REST Clouds API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Clouds",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List connected clouds",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/clouds"
+          },
+          "docs": "List connected clouds"
+        },
+        {
+          "info": {
+            "name": "Remove a cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove a cloud"
+        },
+        {
+          "info": {
+            "name": "Connect AWS cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/aws"
+          },
+          "docs": "Connect AWS cloud"
+        },
+        {
+          "info": {
+            "name": "Connect Azure cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/azure"
+          },
+          "docs": "Connect Azure cloud"
+        },
+        {
+          "info": {
+            "name": "Connect GCP cloud",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/gcp"
+          },
+          "docs": "Connect GCP cloud"
+        },
+        {
+          "info": {
+            "name": "Create Kubernetes cloud connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/kubernetes"
+          },
+          "docs": "Create Kubernetes cloud connection"
+        },
+        {
+          "info": {
+            "name": "List cloud assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/clouds/assets"
+          },
+          "docs": "List cloud assets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

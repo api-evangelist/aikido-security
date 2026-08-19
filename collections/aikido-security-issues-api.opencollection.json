@@ -1,0 +1,118 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Aikido Security Public REST Clouds Issues API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Issues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Export all issues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues"
+          },
+          "docs": "Export all issues"
+        },
+        {
+          "info": {
+            "name": "Get issue detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get issue detail"
+        },
+        {
+          "info": {
+            "name": "Ignore an issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/issues/:id/ignore",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Ignore an issue"
+        },
+        {
+          "info": {
+            "name": "Snooze an issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.aikido.dev/api/public/v1/issues/:id/snooze",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Snooze an issue"
+        },
+        {
+          "info": {
+            "name": "List open issue groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues/groups/open"
+          },
+          "docs": "List open issue groups"
+        },
+        {
+          "info": {
+            "name": "Get issue group detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/issues/groups/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get issue group detail"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

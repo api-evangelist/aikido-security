@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Aikido Security Public REST Clouds Workspace API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Workspace",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get workspace info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/workspace"
+          },
+          "docs": "Get workspace info"
+        },
+        {
+          "info": {
+            "name": "Get full OpenAPI spec of Aikido Public REST API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.aikido.dev/api/public/v1/openapi"
+          },
+          "docs": "Get full OpenAPI spec of Aikido Public REST API"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
