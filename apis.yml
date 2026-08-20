@@ -124,6 +124,8 @@ apis:
   description: The Custom Rules API from Aikido Security — 2 operation(s) for custom rules.
   humanURL: https://apidocs.aikido.dev/reference/introduction
   tags:
+  - CustomRules
+  tags_raw:
   - Custom Rules
   properties:
   - type: OpenAPI
@@ -181,6 +183,8 @@ apis:
   description: The Teams API from Aikido Security — 2 operation(s) for teams.
   humanURL: https://apidocs.aikido.dev/reference/introduction
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
@@ -200,6 +204,8 @@ apis:
   description: The Users API from Aikido Security — 2 operation(s) for users.
   humanURL: https://apidocs.aikido.dev/reference/introduction
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -219,6 +225,8 @@ apis:
   description: The Webhooks API from Aikido Security — 2 operation(s) for webhooks.
   humanURL: https://apidocs.aikido.dev/reference/introduction
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
