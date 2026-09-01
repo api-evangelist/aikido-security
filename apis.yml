@@ -136,7 +136,7 @@ apis:
   description: The Custom Rules API from Aikido Security — 2 operation(s) for custom rules.
   humanURL: https://apidocs.aikido.dev/reference/introduction
   tags:
-  - Custom Rules
+  - CustomRules
   tags_raw:
   - Custom Rules
   properties:
