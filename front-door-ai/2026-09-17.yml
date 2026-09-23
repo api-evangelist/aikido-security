@@ -1,0 +1,31 @@
+# Front Door AI Index — aikido-security — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: aikido-security
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.aikido.dev
+  final_host: www.aikido.dev
+  ownership: own
+  owner: aikido-security
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 15
+  host_score: 15
+  density: 11.53
+  words: 1301
+  tiers:
+    agentic: 4
+    core: 11
+    model: 0
+  ambiguous: 11
+  top_terms:
+    AI: 11
+    agent: 8
+    prompts: 2
+    smart: 2
+    AI agent: 1
+    agentic: 1
+    automation: 1
