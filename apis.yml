@@ -296,6 +296,9 @@ apis:
   - type: RateLimits
     url: https://apidocs.aikido.dev/reference/rate-limiting
 common:
+  - type: CapabilityMap
+    url: capabilities/aikido-security-capability-edges.yml
+    name: Aikido Security Business Capability Map
   - type: AgenticAccess
     url: agentic-access/aikido-security-agentic-access.yml
   - type: TrustCenter

@@ -1,0 +1,44 @@
+slug: aikido-security
+provider: Aikido Security
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Code Repositories
+  spec_file: aikido-security-code-repositories-api-openapi.yml
+  capability_id: BC-620.40
+  capability_id_l1: BC-620
+  capability_name: Vulnerability Management
+  confidence: 0.72
+  evidence: '"Scan a code repository", "Export SBOM (packages and licenses) for a code repository"'
+  reason: Repositories are registered and scanned for security findings (SAST/SCA) with SBOM export —
+    vulnerability scanning and software supply-chain security rather than source-control/development practice.
+- tag: Containers
+  spec_file: aikido-security-containers-api-openapi.yml
+  capability_id: BC-620.40
+  capability_id_l1: BC-620
+  capability_name: Vulnerability Management
+  confidence: 0.72
+  evidence: '"List container repositories", "Scan container"'
+  reason: Container image registration and vulnerability scanning on a security platform — clearly vulnerability
+    detection/remediation workflow, not artefact or release management.
+- tag: Clouds
+  spec_file: aikido-security-clouds-api-openapi.yml
+  capability_id: BC-620
+  capability_id_l1: BC-620
+  capability_name: Cybersecurity Management
+  confidence: 0.7
+  evidence: '"Connect AWS cloud", "Create Kubernetes cloud connection", "List cloud assets" on an "all-in-one
+    application security platform"'
+  reason: Operations onboard cloud accounts into a security posture (CSPM) platform and inventory cloud
+    assets for scanning — cybersecurity management. The exact sub-capability (vulnerability vs security
+    architecture) is not pinned by the operations, so L1 only.
