@@ -51,6 +51,18 @@ tags:
   - Developer-First
   - IaC Scanning
   - SAST
+  - Software Composition Analysis
+  - Secret Detection
+tags_raw:
+  - AI Pentesting
+  - API Security
+  - Application Security
+  - Cloud Security
+  - Compliance
+  - DAST
+  - Developer-First
+  - IaC Scanning
+  - SAST
   - SCA
   - Secret Detection
 url: >-
