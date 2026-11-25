@@ -66,7 +66,7 @@
 
 Aikido Security is a developer-first all-in-one application security platform that consolidates SAST, SCA, secret detection, container scanning, IaC scanning, CSPM, DAST, API security, malware detection, cloud posture, and AI pentesting into a single product designed for engineering teams. Aikido exposes a public REST API at apidocs.aikido.dev covering issues, code repositories, cloud resources, containers, domains and APIs, compliance (SOC2, ISO 27001, NIS2, CIS), custom SAST rules, AI pentesting, task tracking, webhooks, user and team management, Zen app-protection configuration, and activity logging.
 
-**Areas:** AI Pentesting · API Security · Application Security · Cloud Security · Compliance · DAST · Developer-First · IaC Scanning · SAST · Software Composition Analysis · Secret Detection
+**Areas:** AI Pentesting · API Security · Application Security · Cloud Security · Compliance · DAST · IaC Scanning · SAST · Software Composition Analysis · Secret Detection
 
 ## Aikido Security on APIs.io
 
@@ -115,6 +115,12 @@ Postman and Open Collection request collections.
 - [Aikido Security Public REST Clouds Workspace API](https://apis.io/collections/aikido-security/open-aikido-security-workspace-api/)
 - [Aikido Security Public REST Clouds Zen API](https://apis.io/collections/aikido-security/open-aikido-security-zen-api/)
 
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Aikido Security API Rules](https://apis.io/rules/aikido-security/aikido-security-rules/)
+
 #### Security (4)
 
 Authentication, trust centre, and vulnerability disclosure.
@@ -156,18 +162,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 29.6** — thin · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 34.7** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 64.3 |
 | Contract quality | 46.3 |
-| Contract governance | 0.0 |
-| Operational transparency | 15.8 |
-| Developer ergonomics | 21.4 |
-| Access clarity | 26.3 |
+| Contract governance | 13.6 |
+| Operational transparency | 31.0 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 30.9 |
 
-**Agent readiness 19.8** — agent-aware
+**Agent readiness 21.0** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -190,6 +196,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
 **Regulatory alignment 20.1** — Horizontal (data, software, accessibility, platform)
 
